@@ -113,7 +113,7 @@ def shutdown_server():
     finally:
         sys.exit(0)  # Exit the application
 
-@app.before_first_request
+@app.before_request
 def before_first_request():
     # Ensure that the required environment variables are set
     if not all([TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN, TWILIO_PHONE_NUMBER, openai.api_key]):
@@ -131,7 +131,7 @@ if __name__ == "__main__":
     print("Server is running at http://localhost:5000")
     
     # Call the number to initiate the conversation
-    make_call(os.getenv("TARGET_PHONE_NUMBER", add target number))  # Use environment variable for the target number
+    make_call(os.getenv("TARGET_PHONE_NUMBER", Target Number))  # Use environment variable for the target number
     
     try:
         server.serve_forever()
