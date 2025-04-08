@@ -131,7 +131,7 @@ if __name__ == "__main__":
     print("Server is running at http://localhost:5000")
     
     # Call the number to initiate the conversation
-    make_call(os.getenv("TARGET_PHONE_NUMBER", '+917737807496'))  # Use environment variable for the target number
+    make_call(os.getenv("TARGET_PHONE_NUMBER", add target number))  # Use environment variable for the target number
     
     try:
         server.serve_forever()
