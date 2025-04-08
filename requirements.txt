@@ -1,0 +1,7 @@
+Flask
+flask-sockets
+twilio
+openai
+python-dotenv
+gevent
+gevent-websocket
